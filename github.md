@@ -178,6 +178,9 @@ git remote -v
 git push [alias] [branch]
    //推送本地的 master 分支到远程 origin，
 git push origin master    # 推送到 Github.
+	// 推送本地的master分支到远程的main
+git push origin master:main
+
 // 删除远程仓库
 git remote rm [别名]
 // 修改仓库地址
