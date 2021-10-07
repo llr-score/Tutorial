@@ -59,6 +59,8 @@ git checkout v1.0 //切换到该标签下的代码状态。
 ```
 ```
 git config --list // 查看当前git环境所有配置
+git config user.email //查看邮箱
+git config --global user.email " .com" // 修改邮箱
 ```
 
 ---
@@ -182,3 +184,15 @@ git remote rm [别名]
 git remote set-url origin ....
 ```
 
+----
+##### 一些报错
+- 致命的：无法找到远程参考主，也就是报错的意思。错误的提示内容意思是找不到需要连接的对象。
+```
+fatal: Couldn't find remote ref master
+```
+master最近发现默认的 git 分支名称是种族主义的，因此已将其更改为默认值main。
+
+因此，我们不是从master分支中拉取，而是从默认main分支中拉取：
+```
+git pull origin main
+```
