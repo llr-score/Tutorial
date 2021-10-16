@@ -199,3 +199,13 @@ master最近发现默认的 git 分支名称是种族主义的，因此已将其
 ```
 git pull origin main
 ```
+
+- 拒绝合并分支
+```
+fatal: refusing to merge unrelated histories
+```
+可能会在git pull或者git push中都有可能会遇到，这是因为两个分支没有取得关系。
+在你操作命令后面加--allow-unrelated-histories
+```
+git merge master --allow-unrelated-histories
+```
